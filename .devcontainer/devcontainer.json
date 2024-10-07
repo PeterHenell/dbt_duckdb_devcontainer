@@ -25,7 +25,8 @@
                 "njpwerner.autodocstring",
                 "ms-toolsai.jupyter",
                 "ms-toolsai.vscode-jupyter-cell-tags",
-                "ms-toolsai.jupyter-renderers"
+                "ms-toolsai.jupyter-renderers",
+                "donJayamanne.vscode-default-python-kernel"
             ]
         }
     },

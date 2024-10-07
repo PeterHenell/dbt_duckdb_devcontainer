@@ -1,5 +1,5 @@
 SELECT *
-FROM read_csv('/mnt/data_sources/sample.tsv',
+FROM read_csv('/mnt/data_sources/*.tsv',
     delim = '\t',
     header = true
     )

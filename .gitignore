@@ -1,2 +1,3 @@
 src/dbt_duckdb_devcontainer/dev.duckdb
 src/dbt_duckdb_devcontainer/.user.yml
+data/*

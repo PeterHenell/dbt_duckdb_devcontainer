@@ -35,7 +35,7 @@
         8080
     ],
     "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/vscode/.ssh,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
         "source=./data,target=/mnt/data_sources,type=bind,consistency=cached",
         "source=dbt_duckdb-venv-volume,target=/poetry/venv,type=volume"
     ]

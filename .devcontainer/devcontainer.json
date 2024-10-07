@@ -1,0 +1,36 @@
+{
+    "name": "dbt_duckdb",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux#": "/bin/bash",
+                "python.pythonPath": "/poetry/venv/bin/python3",
+                "python.defaultInterpreterPath": "/poetry/venv/bin/python3",
+                "files.associations": {
+                    "*.yaml": "jinja-yaml",
+                    "*.yml": "jinja-yaml",
+                    "*.sql": "jinja-sql",
+                    "*.md": "jinja-md"
+                }
+            },
+            "extensions": [
+                "astienboutonnet.vscode-dbt",
+                "innoverio.vscode-dbt-power-user",
+                "samuelcolvin.jinjahtml",
+                "ms-python.python",
+                "njpwerner.autodocstring"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000,
+        8080
+    ],
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+        "source=dbt_duckdb-venv-volume,target=/poetry/venv,type=volume"
+    ]
+}

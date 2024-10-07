@@ -14,14 +14,18 @@
                     "*.yml": "jinja-yaml",
                     "*.sql": "jinja-sql",
                     "*.md": "jinja-md"
-                }
+                },
+                "jupyter.kernels.trusted": [ "/poetry/venv/bin/python3"]
             },
             "extensions": [
                 "astienboutonnet.vscode-dbt",
                 "innoverio.vscode-dbt-power-user",
                 "samuelcolvin.jinjahtml",
                 "ms-python.python",
-                "njpwerner.autodocstring"
+                "njpwerner.autodocstring",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.jupyter-renderers"
             ]
         }
     },
@@ -30,7 +34,8 @@
         8080
     ],
     "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/.ssh,target=/vscode/.ssh,type=bind,consistency=cached",
+        "source=./data,target=/mnt/data_sources,type=bind,consistency=cached",
         "source=dbt_duckdb-venv-volume,target=/poetry/venv,type=volume"
     ]
 }
